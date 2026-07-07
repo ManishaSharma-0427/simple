@@ -1,90 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Student Management System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+}
+
+/* Navigation */
+
+nav{
+    width:100%;
+    padding:18px 8%;
+    background:rgba(0,0,0,0.25);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffe600;
+}
+
+/* Hero */
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:85vh;
+}
+
+.card{
+    width:900px;
+    background:white;
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.card h1{
+    font-size:45px;
+    color:#0d47a1;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.add{
+    background:#28a745;
+}
+
+.view{
+    background:#007bff;
+}
+
+.update{
+    background:#ff9800;
+}
+
+.delete{
+    background:#dc3545;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.3);
+}
+
+.info{
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:#f5f5f5;
+    border-radius:15px;
+    padding:25px;
+}
+
+.box h2{
+    color:#1565c0;
+    font-size:32px;
+}
+
+.box p{
+    margin-top:10px;
+    font-size:16px;
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:15px;
+    font-size:15px;
+}
+</style>
+
 </head>
+
 <body>
 
-    <header>
-        <h1>Student Management System</h1>
+<nav>
+    <div class="logo">🎓 Student Management</div>
 
-        <nav>
-            <a href="#">Home</a> |
-            <a href="#">Students</a> |
-            <a href="#">Courses</a> |
-            <a href="#">Attendance</a> |
-            <a href="#">Contact</a>
-        </nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Attendance</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-        <hr>
-    </header>
+<section class="hero">
 
-    <main>
+<div class="card">
 
-        <section>
-            <h2>Welcome</h2>
+<h1>Student Management System</h1>
 
-            <p>
-                Welcome to the Student Management System. Manage student records,
-                attendance, courses, and other academic information efficiently.
-            </p>
-        </section>
+<p>
+Manage student records efficiently with an easy-to-use dashboard.
+Add, update, delete, and view student information in one place.
+</p>
 
-        <section>
+<div class="buttons">
+    <a href="#" class="btn add">Add Student</a>
+    <a href="#" class="btn view">View Students</a>
+    <a href="#" class="btn update">Update</a>
+    <a href="#" class="btn delete">Delete</a>
+</div>
 
-            <h2>Student Operations</h2>
+<div class="info">
 
-            <button>Add Student</button>
-            <button>View Students</button>
-            <button>Update Student</button>
-            <button>Delete Student</button>
+<div class="box">
+<h2>500+</h2>
+<p>Students</p>
+</div>
 
-        </section>
+<div class="box">
+<h2>25</h2>
+<p>Teachers</p>
+</div>
 
-        <br>
+<div class="box">
+<h2>15</h2>
+<p>Courses</p>
+</div>
 
-        <section>
+<div class="box">
+<h2>98%</h2>
+<p>Attendance</p>
+</div>
 
-            <h2>Dashboard</h2>
+</div>
 
-            <table border="1" cellpadding="10">
-                <tr>
-                    <th>Category</th>
-                    <th>Total</th>
-                </tr>
+</div>
 
-                <tr>
-                    <td>Students</td>
-                    <td>500</td>
-                </tr>
+</section>
 
-                <tr>
-                    <td>Teachers</td>
-                    <td>25</td>
-                </tr>
-
-                <tr>
-                    <td>Courses</td>
-                    <td>15</td>
-                </tr>
-
-                <tr>
-                    <td>Attendance</td>
-                    <td>98%</td>
-                </tr>
-
-            </table>
-
-        </section>
-
-    </main>
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 Student Management System. All Rights Reserved.</p>
-    </footer>
+<footer>
+© 2026 Student Management System | Designed with HTML & CSS
+</footer>
 
 </body>
 </html>
